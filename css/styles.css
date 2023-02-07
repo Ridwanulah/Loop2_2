@@ -1,0 +1,165 @@
+:root{
+    --BODY-BGCOLOR: rgb(43, 43, 43);
+    --BODY-FONT: "Roboto", sans-serif;
+    --MAIN-BGCOLOR: yellow;
+    --MAIN-PADDING: 1em;
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    height: auto;
+    display: block;
+}
+
+body{
+    background-color: var(--BODY-BGCOLOR);
+    font-family: var(--BODY-FONT);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    background-color: var(--MAIN-BGCOLOR);
+    width: 70vw;
+    padding: var(--MAIN-PADDING);
+}
+
+.account_close{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.fa-close{
+    color: rgb(70, 70, 70);
+    font-size: 1.5em;
+}
+
+.main__article{
+    background-color: white;
+    width: 100%;
+    padding: 1em;
+    margin: 2em 0;
+    transform: translateX(15%);
+}
+
+.main__article figure img{
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
+    transform: translateY(-80%);
+}
+
+.label-block, .label-inline{
+    font-size: 0.6em;
+    font-weight: 700;
+    color: grey;
+    display: block;
+}
+
+.label-block input{
+    display: block;
+}
+
+.label-block input, .label-inline input{
+    width: 100%;
+    font-size: 0.6em;
+    border: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    margin: 0.5em 0;
+}
+
+.avater-name{
+    display: flex;
+}
+
+.avater-name label{
+    width: 50%;
+}
+
+input:focus{
+    outline: none;
+}
+
+textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.main-option{
+    font-size: 0.6em;
+    font-weight: 800;
+    color: rgb(70, 70, 70);
+    text-align: right;
+}
+
+.main-option p{
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+.main-option p:hover, .fa-close:hover{
+    cursor: pointer;
+    color: black;
+}
+
+@media screen and (min-width: 425px) {
+    .main__article figure img{
+        transform: translateY(-60%);
+    }
+
+    .label-block, .label-inline{
+        font-size: 0.8em;
+    }
+
+    .main-option{
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main__article figure img{
+        width: 20%;
+        transform: translateY(-40%);
+    }
+
+    label{
+        margin: 0.5em 0;
+    }
+
+    .label-block, .label-inline{
+        font-size: 1.2em;
+    }
+
+    .main-option{
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main__article{
+        margin: 3em 1em;
+    }
+
+    .label-block, .label-inline{
+        font-size: 1.6em;
+    }
+
+    .main-option{
+        font-size: 1.3em;
+    }
+}
